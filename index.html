@@ -22,7 +22,9 @@
       <p>Reload for another joke!</p>
 
       <div class="content" id="quotes">
+        
       </div>
+      <button id="myBtn">Want an other one ?</button>
     </div>
 
   </section>
@@ -46,10 +48,13 @@
         <p><strong>${simpsons.character}</strong></p>
         <p>${simpsons.quote}</p>
         <img src="${simpsons.image}" />
+
       `;
       document.querySelector('#quotes').innerHTML = simpsonsHtml;
     });
 }
+
+document.getElementById("myBtn").addEventListener("click", fetchSimpsonsJSON);
 
 fetchSimpsonsJSON();
 
